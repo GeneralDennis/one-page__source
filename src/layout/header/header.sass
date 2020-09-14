@@ -1,0 +1,181 @@
+@import '../../common/variables'
+@import '../../common/mixins'
+
+.header
+  width: 100%
+  padding: 35px 100px 202px 100px
+  background: url('./banner-bg.jpg') 0 0 no-repeat #E9E9E9
+  background-size: cover
+
+  +max-w(720)
+    padding: 35px
+
+.header-logo
+  height: 25px
+  width: 31px
+  background: url('./logo.svg') 0 0 no-repeat
+  background-size: contain
+
+.header-menu
+  position: relative
+  display: flex
+  justify-content: space-between
+
+.header-menu__items
+  display: flex
+  transition: left .7s
+
+  +max-w(880)
+    position: absolute
+    flex-direction: column
+    top: -40px
+    left: -1000px
+    padding-top: 35px
+    justify-content: start
+    width: 100vw
+    height: 100vh
+    background: #E9E9E9
+    // opacity: 0
+    // visibility: hidden
+
+.open-menu
+  // visibility: visible
+  left: -35px
+  z-index: 3
+  // opacity: 1
+
+.header-burger
+  display: none
+  position: relative
+  height: 30px
+  width: 30px
+  cursor: pointer
+
+  +max-w(880)
+    display: block
+    z-index: 5
+
+.header-burger span
+  width: 30px
+  height: 3px
+  background: #000
+
+
+.header-burger span
+  position: absolute
+  transition: all .3s
+
+.header-burger span:nth-child(2)
+  top: 8px
+
+.header-burger span:nth-child(3)
+  top: 16px
+// .header-burger span:nth-child(1)
+//   transition: position .3s, height .3s .3s
+
+.close
+  height: 30px
+  width: 30px
+  overflow: hidden
+
+.close span:nth-child(1)
+  position: absolute
+  top: 0
+  background: none
+  width: 30px
+  height: 30px
+  border: 2px solid #000
+  border-radius: 50%
+
+.close span:nth-child(2),.close span:nth-child(3)
+  position: absolute
+  top: 14px
+  left: 9px
+  height: 2px
+  width: 12px
+  transform: rotate(45deg)
+
+.close span:nth-child(3)
+  transform: rotate(-45deg)
+
+.header-menu__item
+  padding: 2px
+  a
+    text-decoration: none
+    color: #000
+    text-transform: uppercase
+    margin: 0 10px
+    text-shadow: 0 0 2px #efefef
+    font-family: $font-family-main
+
+  &--active
+    a
+      color: $main-color
+
+
+  &:hover:not(.header-menu__item--active)
+    background: $main-color
+
+.header-content
+  display: flex
+  flex-direction: column
+  margin-top: 174px
+  font-family: $font-family-main
+  align-items: flex-end
+
+  +max-w(768)
+    max-width: 520px
+    width: 100%
+    margin: 174px auto 0
+    align-items: unset
+
+
+.header-title
+  max-width: 504px
+  width: 100%
+  margin-bottom: 15px
+  font-weight: 500
+  font-size: 38px
+  line-height: 48px
+  letter-spacing: 0.38px
+  color: #1D1D1D
+
+  +max-w(768)
+    font-size: 34px
+    text-align: center
+
+.header-text
+  max-width: 504px
+  width: 100%
+  margin-bottom: 35px
+  font-weight: normal
+  font-size: 18px
+  line-height: 28px
+  letter-spacing: 0.09px
+  color: #787878
+  font-family: $font-family-second
+  text-align: center
+
+  +max-w(768)
+    font-size: 14px
+
+
+.header-button
+  padding: 23px 43px
+  margin-right: 330px
+  background: $main-color
+  font-family: $font-family-main
+  font-weight: 500
+  font-size: 12px
+  letter-spacing: 1.2px
+  text-transform: uppercase
+  border: none
+  color: #fff
+  cursor: pointer
+
+  &:hover
+    background: #02b8b2
+
+  +max-w(768)
+    padding: 13px 23px
+    width: 100%

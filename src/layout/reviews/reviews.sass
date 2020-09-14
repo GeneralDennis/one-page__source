@@ -1,0 +1,85 @@
+.reviews
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  padding: 165px 20px 60px
+  background: $main-color
+  font-family: $font-family-main
+.reviews-text
+  max-width: 840px
+  width: 100%
+  margin: 0 0 24px
+  font-weight: 500
+  font-size: 30px
+  line-height: 36px
+  letter-spacing: 0.3px
+  text-align: center
+  color: #FFFFFF
+
+  +max-w(600)
+    font-size: 24px
+  +max-w(480)
+    font-size: 16px
+.reviews-author
+  width: auto
+  margin: 0 0 92px
+  font-weight: 500
+  font-size: 12px
+  line-height: 36px
+  letter-spacing: 1.2px
+  text-transform: uppercase
+  color: #FFFFFF
+
+.reviews-dots
+  min-width: 50px
+  display: flex
+  justify-content: space-between
+  align-items: baseline
+
+.dot
+  display: block
+  width: 9px
+  height: 9px
+  border-radius: 50%
+  background: #B0E8E6
+
+  &--active
+    height: 13px
+    width: 13px
+    background: #ffffff
+
+
+.companys
+  display: flex
+  width: 100%
+  padding: 65px 103px 66px
+  // justify-content: space-around
+
+  +max-w(1200)
+    flex-wrap: wrap
+    padding: 30px 50px 33px
+
+
+.company
+  width: 20%
+  height: 65px
+
+  +max-w(1200)
+    width: calc( 100% / 3 )
+    &:not(:last-child)
+      margin-bottom: 50px
+
+  +max-w(680)
+    width: 50%
+
+  +max-w(420)
+    width: 100%
+
+  img
+    display: block
+    height: 100%
+    width: auto
+    margin: 0 auto
+    object-fit: cover
+    object-position: center

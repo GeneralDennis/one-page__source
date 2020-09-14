@@ -1,0 +1,76 @@
+.contact-info
+  display: flex
+  padding: 97px
+  background: #E0E0E0
+  +max-w(779)
+    flex-direction: column
+  +max-w(680)
+    padding: 30px
+
+.contact-info__container
+  max-width: 500px
+  margin-right: 15px
+  +max-w(779)
+    margin-right: 0
+    margin-bottom: 30px
+
+.contact-info__title
+  font-family: $font-family-main
+  font-weight: 500
+  font-size: 30px
+  line-height: 34px
+  letter-spacing: 0.3px
+  color: #171717
+
+.contact-info__text
+  margin: 24px 0 9px
+  font-family: $font-family-second
+  font-size: 16px
+  line-height: 24px
+  color: #787878
+
+.contact-info__form
+  margin: 0 0 0 auto
+  +max-w(1359)
+    .feedback-field__name, .feedback-field__email
+      width: 100%
+  +max-w(779)
+    max-width: 100%
+
+.contact-info__submit
+  margin: 0 auto 0 0
+  +max-w(600)
+    width: 100%
+
+.contact-info__contacts
+  font-family: $font-family-second
+  font-size: 16px
+  line-height: 36px
+  color: #171717
+
+.contact-info__contacts-item
+  span
+    margin-right: 15px
+    font-weight: bold
+
+.contact-map
+  position: relative
+  width: 100%
+  padding: 97px
+  +max-w(680)
+    padding: 30px
+
+.map
+  height: 475px
+  width: 100%
+  background: #E0E0E0
+
+.map-marker
+  position: absolute
+  height: 35px
+  width: 25px
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background: url('./pointer.svg') 50% 50% no-repeat
+

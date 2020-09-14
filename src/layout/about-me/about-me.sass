@@ -1,0 +1,90 @@
+.about-me
+  display: flex
+  img
+    width: 50%
+    height: auto
+    object-fit: cover
+
+  +max-w(990)
+    flex-direction: column
+    img
+      width: 100%
+
+
+.about-me__block
+  display: flex
+  width: 100%
+  flex-direction: column
+  padding: 130px 87px 135px
+  background: #F5F5F5
+
+  +max-w(990)
+    img
+      width: 50%
+
+  +max-w(768)
+    padding: 35px
+
+  +max-w(480)
+    img
+      width: 100%
+
+.about-me__title
+  font-family: $font-family-main
+  font-size: 30px
+  line-height: 84px
+  letter-spacing: 0.3px
+  color: #171717
+
+.about-me__text
+  max-width: 480px
+  margin: 33px 0
+  font-family: $font-family-second
+  font-size: 16px
+  line-height: 24px
+  color: #787878
+
+  p:not(:last-child)
+    margin-bottom: 33px
+
+.ask
+  padding: 100px 0
+  text-align: center
+
+  +max-w(480)
+    padding: 35px 20px
+
+.ask-title
+  max-width: 260px
+  margin: 0 auto
+  font-family: $font-family-main
+  font-size: 30px
+  line-height: 34px
+  letter-spacing: 0.3px
+  color: #1D1D1D
+
+  +max-w(480)
+    font-size: 20px
+    line-height: 24px
+
+.ask-subtitle
+  max-width: 570px
+  margin: 27px auto 34px
+  font-family: $font-family-second
+  font-size: 16px
+  line-height: 20px
+  color: #787878
+
+.ask-btn
+  padding: 24px 52px 23px
+  font-family: $font-family-second
+  font-size: 12px
+  line-height: 16px
+  letter-spacing: 1.2px
+  text-transform: uppercase
+  color: #FFFFFF
+  border: none
+  background: $main-color
+
+  +max-w(480)
+    padding: 14px 30px
