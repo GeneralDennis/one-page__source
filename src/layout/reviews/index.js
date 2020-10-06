@@ -1,8 +1,28 @@
+import 'swiper/swiper-bundle.css'
+import Swiper from 'swiper/swiper-bundle'
 import './reviews.sass'
-// import Swiper from 'swiper';
-// import 'swiper/swiper-bundle.css';
 
-// var mySwiper = new Swiper('.swiper-container', {
-//   // Optional parameters
-//   loop: true,
-// })
+class ReviewsSlider {
+  constructor($root) {
+
+    this.firstSlider = new Swiper('.reviews-swiper-container', {
+      slidesPerView: 1,
+      speed: 1000,
+      autoplay: {
+        delay: 7000,
+        disableOnInteraction: false,
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: 'true',
+      },
+      loopedSlides: $root.find('.reviews-swiper-slide').length,
+      on: {
+        init() {}
+      }
+    })
+  }
+}
+
+export default ReviewsSlider

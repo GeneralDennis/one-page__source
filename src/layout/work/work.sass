@@ -126,6 +126,7 @@
   text-align: center
 
 .works__load-more
+  position: relative
   padding: 42px 0 46px
   background: #F5F5F5
   font-family: $font-family-main
@@ -138,5 +139,20 @@
   text-align: center
   cursor: pointer
 
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background:  rgba(#8E8E8E, .7)
+    z-index: 1
+    opacity: 0
+    transform: scaleX(.6)
+    transition: transform .4s,opacity .4s
   &:hover
     color: $main-color
+    &::after
+      transform: scaleX(1)
+      opacity: 1

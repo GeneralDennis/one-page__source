@@ -24,7 +24,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
  */
 const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 const SERVER_HOST = 'localhost';
-const SERVER_PORT = 3000;
+const SERVER_PORT = 3001;
 
 /**
  * Webpack config variables
@@ -43,8 +43,7 @@ const PATH_PUBLIC = IS_PRODUCTION ? PATH_PUBLIC_BUILD : `http://${SERVER_HOST}:$
  * @returns {any[]}
  */
 const styleLoader = (syntax) => {
-  const loaders = [
-    {
+  const loaders = [{
       loader: ExtractCssChunks.loader,
       options: {
         // if you want HMR - we try to automatically inject hot
@@ -92,8 +91,7 @@ const styleLoader = (syntax) => {
             PATH_SRC,
           ],
         },
-      }
-      ,
+      },
     },
   ];
 
@@ -144,8 +142,7 @@ const config = {
   },
 
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.vue$/,
         use: 'vue-loader',
       },
@@ -159,15 +156,13 @@ const config = {
       },
       {
         test: /\.(jpe?g|png|gif|svg|ico)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: `${PATH_BASE}images/[name]-[hash:8].[ext]`,
-              esModule: false,
-            },
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: `${PATH_BASE}images/[name]-[hash:8].[ext]`,
+            esModule: false,
           },
-        ],
+        }, ],
         exclude: [
           path.resolve(PATH_SRC, 'fonts'),
           path.resolve(PATH_SRC, 'images'),
@@ -177,16 +172,14 @@ const config = {
       {
         // Контентные картинки
         test: /\.(jpe?g|png|gif|svg|ico)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: `${PATH_BASE}images/[name]-[hash:8].[ext]`,
-              publicPath: './',
-              esModule: false,
-            },
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: `${PATH_BASE}images/[name]-[hash:8].[ext]`,
+            publicPath: './',
+            esModule: false,
           },
-        ],
+        }, ],
         include: [
           path.resolve(PATH_SRC, 'images'),
         ],
@@ -196,8 +189,7 @@ const config = {
       },
       {
         test: /\.svg$/,
-        use: [
-          {
+        use: [{
             loader: 'svg-inline-loader',
           },
           {
@@ -215,15 +207,13 @@ const config = {
       },
       {
         test: /\.(woff|woff2|eot|otf|ttf|svg)(\?.*$|$)/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: `${PATH_BASE}fonts/[name]-[hash:8].[ext]`,
-              esModule: false,
-            },
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: `${PATH_BASE}fonts/[name]-[hash:8].[ext]`,
+            esModule: false,
           },
-        ],
+        }, ],
         include: [
           path.resolve(__dirname, 'node_modules'),
           path.resolve(PATH_SRC, 'fonts'),
@@ -256,14 +246,12 @@ const config = {
         exclude: [
           /inline/i,
         ],
-        oneOf: [
-          {
+        oneOf: [{
             resourceQuery: /^\?vue/,
             use: ['pug-plain-loader'],
           },
           {
-            use: [
-              {
+            use: [{
                 loader: 'file-loader',
                 options: {
                   name: '[name].html',

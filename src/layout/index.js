@@ -16,6 +16,14 @@ import './banner';
 import './work-stats';
 import './about-me';
 import './contact-info';
+import './companys';
+
+import ReviewsSlider from './reviews'
+
+let $reviewsSlider = $('.reviews')
+if ($reviewsSlider.length) {
+  new ReviewsSlider($reviewsSlider)
+}
 
 export default () => {
   console.log('init layout');

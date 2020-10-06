@@ -1,7 +1,7 @@
 import './header.sass';
 
 
-$(document).ready(() => {
+$(() => {
   let $burger = $('.header-burger');
   let $menu = $('.header-menu__items');
   if ($burger) {
